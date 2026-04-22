@@ -58,18 +58,19 @@ layout: two-cols
 
 # Disk Layout: Multi-OS Example
 
-1  EFI          ← preserved, reused
-2  MS Reserved  ← untouched
-3  Windows      ← untouched
-4  WinRecovery  ← untouched
-─────────────── ← startpartition
-5  /boot        ← created or emptied
-6  LUKS root    ← created or emptied
-───────────────
-7  data (LUKS btrfs)  ← never touched
-└─ subvol: holger  → /home/holger
-└─ subvol: images  → /var/lib/libvirt/images
-
+```
+1  EFI          <- preserved, reused
+2  MS Reserved  <- untouched
+3  Windows      <- untouched
+4  WinRecovery  <- untouched
+------------------ startpartition
+5  /boot        <- created or emptied
+6  LUKS root    <- created or emptied
+------------------
+7  data (LUKS btrfs)  <- never touched
+   subvol: holger  -> /home/holger
+   subvol: images  -> /var/lib/libvirt/images
+```
 
 ::right::
 
@@ -83,7 +84,7 @@ layout: two-cols
 
 <br>
 
-> Ubuntu → Fedora on same partitions.  
+> Ubuntu → Fedora on same partitions.
 > Windows and data: untouched.
 
 ---
@@ -115,31 +116,32 @@ Extracted after first boot → run via a dedicated system user `hoo`.
 
 # The Full Workflow
 
-┌─────────────┐    ┌──────────────┐    ┌─────────────┐
-│  faibuilder │    │   ksbuilder  │    │   nsbldr    │
-│  or ksbldr  │    │  (Kickstart) │    │  (Ansible)  │
-└──────┬──────┘    └──────┬───────┘    └──────┬──────┘
-│                  │                   │
-└──────────────────┘                   │
-│                               │
-Thumbdrive image              Encrypted tar
-│                               │
-┌─────▼──────┐              ┌─────────▼──────┐
-│  Install / │              │  1st boot:     │
-│  Reinstall │──────────────► import ansible │
-└────────────┘              │  run ansible   │
-│  verify/mount  │
-│  data partitions│
-└────────────────┘
-
-Ansible handles: data subvols · mountpoints · permissions · local users
+```
+ faibuilder                          nsbldr
+ or ksbuilder                        (Ansible builder)
+      |                                    |
+      v                                    v
+ Thumbdrive image                  Encrypted ansible tar
+      |                                    |
+      v                                    |
+ Install / Reinstall                       |
+ (pre-script verifies disk state)          |
+      |                                    |
+      v                                    v
+ First boot  <--------------------------  import & run ansible
+                                           |
+                                           v
+                                    verify/create data subvols
+                                    mountpoints + permissions
+                                    create local users
+```
 
 ---
 layout: center
 class: text-center
 ---
 
-# 🖥 Live Demo
+# Live Demo
 
 *First install → Reinstall → Distribution swap*
 
