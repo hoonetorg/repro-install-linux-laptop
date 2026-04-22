@@ -89,10 +89,10 @@ layout: two-cols
 
 ---
 
-# The Builders
+# The Builders (1)
 
 Everything runs in **Podman containers**. No special host setup beyond:
-`podman` · `tar` · `rsync`
+`podman` · `tar` · `rsync` - `gpg`
 
 <br>
 
@@ -107,6 +107,13 @@ Produce a **bootable disk image** (btrfs, thumbdrive-ready) with:
 **Installations run fully offline.** No internet required.
 
 <br>
+
+---
+
+# The Builders (2)
+
+Everything runs in **Podman containers**. No special host setup beyond:
+`podman` · `tar` · `rsync` - `gpg`
 
 ### `nsbldr` (Ansible builder)
 Packages Ansible content into a **GPG-symmetrically encrypted tar**.
