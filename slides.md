@@ -159,7 +159,7 @@ ksbuilder: produces a an **image** with a partition labeled **"OEMDRV"** which i
 
 Both builders add an additional partition labeled **"EXTRA"** for additional content:
   - Ansible content (encrypted)
-  - Offline package repos (e.g. Fedora 43 WS — no installer ISO exists yet)
+  - Offline package repos (e.g. Fedora 43 WS — no Anaconda ISO exists, only LIVE ISO)
   - Whatever you need
 
 **Installations run fully offline.** No internet required.
