@@ -2,10 +2,11 @@
 theme: seriph
 background: https://cover.sli.dev
 title: Reproducible Linux Installations on Your Laptop Without Data Loss
-info: ODS 2026 · Holger Fischer · hoonetorg
+info: Holger Fischer (hoo) - hoonetorg - 2026
+
 class: text-center
-transition: slide-left
-duration: 30min
+transition: fade-out
+duration: 1h
 ---
 
 # Reproducible Linux Installations
@@ -13,13 +14,15 @@ duration: 30min
 
 *...or having multiple Linux installs side-by-side*
 
+*...or switching Linux distributions without hassle*
+
+
 <div class="abs-br m-6 text-sm opacity-50">
-  Holger Fischer (hoo) · hoonetorg · ODS 2026
+  Holger Fischer (hoo) - hoonetorg - 2026
 </div>
 
 ---
-transition: fade-out
----
+
 
 # The Problem
 
@@ -63,7 +66,7 @@ A Python pre-script inspects the real partition table before touching anything.
 
 Have you defined your disk layout correctly - otherwise **data loss**
 
-**TEST** before you install one real hardware 
+**TEST** before you install on real hardware 
  
 **!!! HAVE BACKUPS !!!**
 
@@ -248,7 +251,7 @@ Even if your setup looks nothing like mine — steal what's useful:
 
 *Slides + code links:*
 
-[Slides](https://raw.githubusercontent.com/hoonetorg/repro-install-linux-laptop/refs/heads/main/slides-export-ods26.pdf)
+[Slides](https://raw.githubusercontent.com/hoonetorg/repro-install-linux-laptop/refs/heads/main/slides-export-latest.pdf)
 
 Source code: 
 
@@ -257,5 +260,5 @@ Watch out for existing repos and changes at [github.com/hoonetorg](https://githu
 There will be a repo (not named yet) consolidating all required tools, containing examples.
 
 <div class="abs-br m-6 text-sm opacity-40">
-  Holger Fischer · ODS 2026
+  Holger Fischer (hoo) - hoonetorg - 2026
 </div>
