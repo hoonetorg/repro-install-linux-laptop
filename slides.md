@@ -2,7 +2,7 @@
 theme: seriph
 background: https://cover.sli.dev
 title: Reproducible Linux Installations on Your Laptop Without Data Loss
-info: ODP 2026 · Holger Fischer · hoonetorg
+info: ODS 2026 · Holger Fischer · hoonetorg
 class: text-center
 transition: slide-left
 duration: 30min
@@ -14,7 +14,7 @@ duration: 30min
 *...or having multiple Linux installs side-by-side*
 
 <div class="abs-br m-6 text-sm opacity-50">
-  Holger Fischer (hoo) · hoonetorg · ODP 2026
+  Holger Fischer (hoo) · hoonetorg · ODS 2026
 </div>
 
 ---
@@ -244,10 +244,18 @@ Even if your setup looks nothing like mine — steal what's useful:
 
 <br>
 
-**hoonetorg** · github.com/hoonetorg
+**hoonetorg** · [github.com/hoonetorg](https://github.com/hoonetorg)
 
-*Slides + code links after the talk*
+*Slides + code links:*
+
+[Slides](https://raw.githubusercontent.com/hoonetorg/repro-install-linux-laptop/refs/heads/main/slides-export-ods26.pdf)
+
+Source code: 
+
+Watch out for existing repos and changes at [github.com/hoonetorg](https://github.com/hoonetorg).
+
+There will be a repo (not named yet) consolidating all required tools, containing examples.
 
 <div class="abs-br m-6 text-sm opacity-40">
-  Holger Fischer · ODP 2026
+  Holger Fischer · ODS 2026
 </div>
