@@ -113,6 +113,37 @@ layout: two-cols
 
 ---
 
+# Partition Layout: 
+
+#### 4 TB disk - P7 ≈ 3490 GiB
+
+``` 
+Fixed partitions total: 606 GiB. Scale: each `=` ≈ 82 GiB
+ 
+| Part | Size       | Bar                                 
+|------|------------|--------------------------------------------
+| 1    | 2 GiB      | =                                                  
+| 2    | 256 MiB    | =                                                  
+| 3    | 200 GiB    | ==                                                 
+| 4    | 2 GiB      | =                                                  
+| 5    | 2 GiB      | =
+| 6    | 200 GiB    | ==
+| 7    | ~3490 GiB  | ===========================================        
+| 8    | 200 GiB    | ==
+```
+
+#### 1TB disk, 2TB disk and 4TB disk in relation 
+
+```
+1TB: |1|2|  3 (200G)  |4|5|  6 (200G)  |        7 (~418G)        |  8 (200G)  |
+
+2TB: |1|2| 3G |4|5| 6G |               7 (~1442G)               | 8G |
+
+4TB: |1|2|3G|4|5|6G|                       7 (~3490G)                       |8G|
+```
+
+---
+
 # The Builders (1)
 
 Everything runs in **Podman containers**. No special host setup beyond:
