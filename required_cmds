@@ -1,0 +1,10 @@
+npm init slidev
+vim package.json 
+vim node_modules/.package-lock.json 
+vim package-lock.json 
+#npm run build
+npm run dev
+vim slides.md 
+npm run dev --remote
+npm i -D playwright-chromium
+npm run export
